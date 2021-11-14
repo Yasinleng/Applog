@@ -1,0 +1,60 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = "1.3.72"
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.1.1"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+//项目中的统一配置
+ext {
+    android_build = [
+            compileSdkVersion: 30,
+            minSdkVersion    : 23,
+            targetSdkVersion : 30,
+            versionCode      : 1,
+            versionName      : "1.0.0",
+            applicationId    : "com.yasin.applog",
+            buildToolsVersion: "30.0.3",
+            supportLibVersion: "1.1.0",
+
+            //apk生成
+            appCode          : 1,
+            appName          : "基础",
+
+
+    ]
+
+    base_libs = [
+            kotlin_stdlib   : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+            core_ktx        : "androidx.core:core-ktx:1.2.0",
+            appcompat       : 'androidx.appcompat:appcompat:1.1.0',
+            material        : 'com.google.android.material:material:1.1.0',
+            constraintlayout: "androidx.constraintlayout:constraintlayout:1.1.3"
+    ]
+
+    other_libs = [
+
+            logger       : 'com.orhanobut:logger:2.2.0',
+
+    ]
+}
