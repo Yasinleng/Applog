@@ -1,6 +1,8 @@
 package com.yasin.log;
 
 
+import com.yasin.log.api.LogProvider;
+
 /**
  * 邮箱：lengyacheng@163.com
  * Created by yasin on 2021/9/4.

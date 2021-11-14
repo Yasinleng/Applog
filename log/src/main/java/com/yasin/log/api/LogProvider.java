@@ -1,4 +1,4 @@
-package com.yasin.log;
+package com.yasin.log.api;
 
 /**
  * 邮箱：lengyacheng@163.com
